@@ -11,6 +11,8 @@ namespace SoftServe.BookingSectors.Native
 			InitializeComponent();
 
 			MainPage = new MainPage();
+			// To inject all of dependencies of the view you must create page instance like a following:
+			// MainPage = new NavigationPage(Resolver.Resolve<SomeView>());
 		}
 
 		protected override void OnStart()

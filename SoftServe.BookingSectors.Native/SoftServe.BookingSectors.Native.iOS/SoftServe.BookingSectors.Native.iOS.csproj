@@ -62,6 +62,7 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AppStart\Bootstrapper.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <None Include="Entitlements.plist" />
@@ -135,4 +136,5 @@
       <Name>SoftServe.BookingSectors.Native</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
 </Project>

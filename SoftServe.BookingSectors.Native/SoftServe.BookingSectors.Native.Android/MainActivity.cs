@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using SoftServe.BookingSectors.Native.Droid.AppStart;
 
 namespace SoftServe.BookingSectors.Native.Droid
 {
@@ -21,6 +22,7 @@ namespace SoftServe.BookingSectors.Native.Droid
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            Bootstrapper.Init();
             LoadApplication(new App());
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)

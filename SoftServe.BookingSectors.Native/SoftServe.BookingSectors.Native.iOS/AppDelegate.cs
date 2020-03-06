@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using SoftServe.BookingSectors.Native.iOS.AppStart;
 using UIKit;
 
 namespace SoftServe.BookingSectors.Native.iOS
@@ -23,6 +24,7 @@ namespace SoftServe.BookingSectors.Native.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            Bootstrapper.Init();
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
