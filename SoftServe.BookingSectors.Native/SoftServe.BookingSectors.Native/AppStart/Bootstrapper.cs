@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using System.Linq;
 using System.Reflection;
+using SoftServe.BookingSectors.Native.ViewModels;
 using Xamarin.Forms;
 
 namespace SoftServe.BookingSectors.Native.AppStart
@@ -33,7 +34,8 @@ namespace SoftServe.BookingSectors.Native.AppStart
 			ContainerBuilder = new ContainerBuilder();
 			foreach (var type in currentAssembly.DefinedTypes
 					  .Where(e=>
-							 e.IsSubclassOf(typeof(Page)))) // #TODO: Add when ViewModel class will be created -> || e.IsSubclassOf(typeof(ViewModel))
+							 e.IsSubclassOf(typeof(Page)) || 
+							 e.IsSubclassOf(typeof(ViewModel))))
 			{
 				ContainerBuilder.RegisterType(type.AsType());
 			}
